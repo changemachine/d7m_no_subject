@@ -1,13 +1,13 @@
 <?php
 function no_subject_form_alter(&$form, &$form_state, $form_id){
 
-          print '<pre>';
-          print_r($form);
-          print '</pre>';
+        //   print '<pre>';
+        //   print_r($form);
+        //   print '</pre>';
 
         if ($form_id == 'comment_form') {
-            $form['subject']['#display'] = 'false';
-            $form['subject']['#default_value'] = 'Feedback';
+            // $form['subject']['#display'] = 'false';
+            $form['subject']['#access'] = 0;
       }
 
 }
